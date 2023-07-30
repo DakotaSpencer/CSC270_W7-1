@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "CSC270_W7-1", "CSC270_W7-1.phpproj", "{5905EBD8-C1E6-42A5-BB5F-0251528145FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5905EBD8-C1E6-42A5-BB5F-0251528145FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5905EBD8-C1E6-42A5-BB5F-0251528145FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5905EBD8-C1E6-42A5-BB5F-0251528145FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5905EBD8-C1E6-42A5-BB5F-0251528145FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D57A5B73-F22F-46E0-B92C-48F38525E4FF}
+	EndGlobalSection
+EndGlobal
