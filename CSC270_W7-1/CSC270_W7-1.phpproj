@@ -6,8 +6,4 @@
     <EnvName>PHPDev</EnvName>
     <RuntimeVersion>8.2</RuntimeVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="Frond_End\" />
-    <Folder Include="Back_End\" />
-  </ItemGroup>
 </Project>
