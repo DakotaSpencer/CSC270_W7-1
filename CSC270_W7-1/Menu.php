@@ -3,7 +3,9 @@ $link = [
     "link1" => "index.php",
     "link2" => "page2.php",
     "link3" => "page3.php",
-]
+    "link4" => "/LogSignPages/Login.php",
+    "link5" => "/LoginSignFunct/SignUp.php"
+];
 ?>
 <div class="dropdown"><button class="dropbtn"><a href="index.php" name="Index">Home</a></button></div>
 
@@ -22,6 +24,22 @@ $link = [
 </div>
 
 <div class="dropdown"><button class="dropbtn"><a href="#" name="Account">Account</a></button></div>
+
+<div class="dropdown">
+    <button class="dropbtn">
+        <a href="/LogSignPages/Login.php" name="Login">Login</a>
+
+    </button>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">
+        <a href="#" name="SignUp">SignUp</a>
+
+    </button>
+</div>
+
+
 
 <div class="dropdown">
     <button class="dropbtn">Lists</button>
