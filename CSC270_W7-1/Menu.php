@@ -1,35 +1,55 @@
 <?php
-$link = [
-    "link1" => "index.php",
-    "link2" => "page2.php",
-    "link3" => "page3.php",
+$linkTO = [
+    "Home" => "index.php",
+    "Genre" => "genre.php",
+    "Account" => "account.php",
+    "Lists" => "list.php",
+    "Preferances" => "preferances.php"
 ]
 ?>
-<div class="dropdown"><button class="dropbtn"><a href="index.php" name="Index">Home</a></button></div>
+<?php
+
+echo'
+<div class="dropdown">
+    <button class="dropbtn">
+        <a href="'.$linkTO["Home"].'" name="Index">Home</a>
+    </button>
+</div>
 
 <div class="dropdown">
     <button class="dropbtn">Genres</button>
     <div class="dropdown-content">
-        <a href="#">Action</a>
-        <a href="#">Adventure</a>
-        <a href="#">Animation</a>
-        <a href="#">Comedy</a>
-        <a href="#">Drama</a>
-        <a href="#">Fantasy</a>
-        <a href="#">Horror</a>
-        <a href="#">Romance</a>
+        <a href="' . $linkTO["Genre"] . '?genre=action">Action</a>
+        <a href="' . $linkTO["Genre"] . '?genre=adventure">Adventure</a>
+        <a href="' . $linkTO["Genre"] . '?genre=animation">Animation</a>
+        <a href="' . $linkTO["Genre"] . '?genre=comedy">Comedy</a>
+        <a href="' . $linkTO["Genre"] . '?genre=drama">Drama</a>
+        <a href="' . $linkTO["Genre"] . '?genre=fantasy">Fantasy</a>
+        <a href="' . $linkTO["Genre"] . '?genre=horror">Horror</a>
+        <a href="' . $linkTO["Genre"] . '?genre=romance">Romance</a>
     </div>
 </div>
 
-<div class="dropdown"><button class="dropbtn"><a href="#" name="Account">Account</a></button></div>
+<div class="dropdown">
+    <button class="dropbtn">
+        <a href="' . $linkTO["Account"] . '" name="Account">Account</a>
+    </button>
+</div>
 
 <div class="dropdown">
     <button class="dropbtn">Lists</button>
     <div class="dropdown-content">
-        <a href="#">History</a>
-        <a href="#">Watch Later</a>
-        <a href="#">Recommendations</a>
-        <a href="#">Custom List 1</a>
-        <a href="#">Custom List 2</a>
+        <a href="' . $linkTO["Lists"] . '?list=history" list="ListID">History</a>
+        <a href="' . $linkTO["Lists"] . '?list=wl" list="ListID">Watch Later</a>
+        <a href="' . $linkTO["Lists"] . '?list=recommendations" list="ListID">Recommendations</a>
+        <a href="' . $linkTO["Lists"] . '?list='.$[session.user.lists[i].id].'">Custom List 1</a>
+        <a href="' . $linkTO["Lists"] . '" list="ListID">Custom List 2</a>
     </div>
 </div>
+
+<div class="dropdown">
+    <button class="dropbtn">
+        <a href="' . $linkTO["Preferances"] . '" name="Preferances">Preferances</a>
+    </button>
+</div>'
+?>
