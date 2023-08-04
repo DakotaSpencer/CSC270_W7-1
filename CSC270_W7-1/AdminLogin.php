@@ -1,10 +1,11 @@
 <?php
-include_once "./MyHeader.php";
-
+include_once "MyHeader.php";
 // Use this page to change the value of
 // $_SESSION["isAdmin"] or such
 
 ?>
+
+<h3>Admin Login</h3>
 
 <form method="post" action="">
     <label>Username:</label><br />
@@ -13,6 +14,11 @@ include_once "./MyHeader.php";
     <input name="password" type="text" value="" /><br />
     <input type="submit" />
 </form>
+
+<p>
+    <a href="Login.php">Not Admin? Click Here</a>
+</p>
+
 
 <br />
 <br />
