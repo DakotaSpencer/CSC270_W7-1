@@ -31,8 +31,14 @@ if (($PageId != "0") && ($SubPages) && ($SubPages->num_rows > 0)) {
 }
 else
 {
-    echo "<br /> Welcome. . . Click a menu link";
+    echo "<br /> Welcome. . . Search below or click a menu link at the top to get started!";
 }
+
+?>
+
+<?php
+
+    
 
 ?>
 

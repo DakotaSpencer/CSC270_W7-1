@@ -3,6 +3,7 @@ session_start(); // Must be first, prior to any HTML. Session will expire
 
 include_once "dbConnector.php";
 include_once "Helper.php";
+include_once "Menu.php";
 
 ?>
 
@@ -63,8 +64,6 @@ $MyHeader = "My Header";
     -->
 </head>
 <body>
-
-<h1><?php echo $MyHeader ?></h1>
 
 <br />
     <!-- Get the menu items -->
