@@ -32,14 +32,6 @@ echo'
 </div>
 
 <div class="dropdown">
-    <button class="dropbtn">About</button>
-    <div class="dropdown-content">
-        <a href="' . $linkTO["About"] . '?section=location" name="ListID">Locations</a>
-        <a href="' . $linkTO["About"] . '?section=contact" name="EmailUs">Email Us</a>
-    </div>
-</div>
-
-<div class="dropdown">
     <button class="dropbtn">
         <a href="' . $linkTO["Account"] . '" name="Account">Account</a>
     </button>
@@ -61,5 +53,15 @@ echo'
     <button class="dropbtn">
         <a href="' . $linkTO["Preferances"] . '" name="Preferances">Preferances</a>
     </button>
-</div>'
+</div>
+
+
+<div class="dropdown">
+    <button class="dropbtn">About</button>
+    <div class="dropdown-content">
+        <a href="' . $linkTO["About"] . '?section=location" name="ListID">Locations</a>
+        <a href="' . $linkTO["About"] . '?section=contact" name="EmailUs">Email Us</a>
+    </div>
+</div>
+'
 ?>
