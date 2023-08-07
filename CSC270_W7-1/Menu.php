@@ -34,7 +34,7 @@ echo'
 <div class="dropdown">
     <button class="dropbtn">About</button>
     <div class="dropdown-content">
-        <a href="' . $linkTO["About"] . '?section=location" list="ListID">Locations</a>
+        <a href="' . $linkTO["About"] . '?section=location" name="ListID">Locations</a>
         <a href="' . $linkTO["About"] . '?section=contact" name="EmailUs">Email Us</a>
     </div>
 </div>
@@ -48,11 +48,11 @@ echo'
 <div class="dropdown">
     <button class="dropbtn">Lists</button>
     <div class="dropdown-content">
-        <a href="' . $linkTO["Lists"] . '?list=history" list="ListID">History</a>
-        <a href="' . $linkTO["Lists"] . '?list=wl" list="ListID">Watch Later</a>
-        <a href="' . $linkTO["Lists"] . '?list=recommendations" list="ListID">Recommendations</a>
-        <a href="' . $linkTO["Lists"] . '" list="ListID">Custom List 1</a>
-        <a href="' . $linkTO["Lists"] . '" list="ListID">Custom List 2</a>
+        <a href="' . $linkTO["Lists"] . '?list=history">History</a>
+        <a href="' . $linkTO["Lists"] . '?list=wl">Watch Later</a>
+        <a href="' . $linkTO["Lists"] . '?list=recommendations">Recommendations</a>
+        <a href="' . $linkTO["Lists"] . '">Custom List 1</a>
+        <a href="' . $linkTO["Lists"] . '">Custom List 2</a>
         <a href="editLists.php">Edit Lists</a>
     </div>
 </div>

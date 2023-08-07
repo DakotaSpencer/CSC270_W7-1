@@ -38,7 +38,14 @@ else
 
 <?php
 
-    
+    echo '
+    <div>
+        <form>
+            <input placeholder="Search..."/>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    '
 
 ?>
 

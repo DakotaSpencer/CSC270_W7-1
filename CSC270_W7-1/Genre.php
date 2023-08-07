@@ -1,3 +1,3 @@
 <?php
-echo $_GET['genre'];
+echo "Chosen genre: ".$_GET['genre'];
 ?>
