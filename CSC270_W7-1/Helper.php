@@ -37,5 +37,17 @@ function PageDisplay($PageData) {
 
 }
 
+function SearchDisplay($SearchData){
+    if($SearchData){
+        $row = mysqli_fetch_array($SearchData);
+
+        echo ' &nbsp; &nbsp; <h2> ' . $row['Header1'] . ' </h2> <br />';
+        echo ' &nbsp; &nbsp; <p> ' . $row['Text1'] . '</p> <br />';
+
+    } // End if
+    else {
+        echo "No Search data to display <br />";
+    }
+}
 
 ?>

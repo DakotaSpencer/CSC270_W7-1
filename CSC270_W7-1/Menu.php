@@ -59,7 +59,7 @@ echo'
 <div class="dropdown">
     <button class="dropbtn">About</button>
     <div class="dropdown-content">
-        <a href="' . $linkTO["About"] . '?section=location" name="ListID">Locations</a>
+        <a href="' . $linkTO["About"] . '?section=location" name="Locations">Locations</a>
         <a href="' . $linkTO["About"] . '?section=contact" name="EmailUs">Email Us</a>
     </div>
 </div>

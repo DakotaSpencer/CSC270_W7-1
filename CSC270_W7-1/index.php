@@ -41,7 +41,7 @@ else
     echo '
     <div>
         <form>
-            <input placeholder="Search..."/>
+            <input placeholder="Search..." type="text"/>
             <button type="submit">Search</button>
         </form>
     </div>

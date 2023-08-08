@@ -59,6 +59,11 @@ function MyPageremove($dbConn, $Id) {
     return @mysqli_query($dbConn, $query);
 }
 
+function Search($dbConn, $searchTerm){
+    $query = "SELECT * FROM Movies WHERE Name like '%".$searchTerm."%' OR MovieDescription like '%" . $searchTerm . "%'";
+    return @mysqli_query($dbConn, $query);
+}
+
 
 ?>
 
