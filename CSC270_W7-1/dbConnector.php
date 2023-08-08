@@ -2,7 +2,7 @@
 
 // Create constants
 DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PSWD', 'pass');
+DEFINE ('DB_PSWD', 'P@ssw0rd');
 DEFINE ('DB_SERVER', 'localhost');
 DEFINE ('DB_NAME', 'mytestdb');
 
@@ -56,6 +56,12 @@ function MyPageremove($dbConn, $Id) {
     // Never delete a page. set it to incative
     $query = "Update FROM MyWebDocs set isActive = 0 where id = " . $Id;
 
+    return @mysqli_query($dbConn, $query);
+}
+
+function Search($dbConn, $searchTerm)
+{
+    $query = "SELECT * FROM Movies WHERE Title like '%" . $searchTerm . "%' OR MovieDescription like '%" . $searchTerm . "%'";
     return @mysqli_query($dbConn, $query);
 }
 
