@@ -56,6 +56,10 @@ Search for a movie!
 
 <script>
    var request = new XMLHttpRequest();
+    $(document).ready(function () {
+        // alert("Ready"); // Use for debugging
+
+    });
     // ---------------------------------
     // Click event
     function myClickEvent() {
@@ -80,7 +84,7 @@ Search for a movie!
         myResponse = request.responseText;
         //alert("A: " + myResponse); // Use for debugging
         //document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
-        myData = JSON.stringify(myResponse);
+        myData = JSON.parse(myResponse);
 
         // alert(myData);
 
