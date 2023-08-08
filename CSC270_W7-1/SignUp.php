@@ -1,9 +1,31 @@
 <?php
+session_start(); //start session and keep data
 include_once "MyHeader.php";
+require_once "dbConnector.php";
 
-// Use this page to change the value of
-// $_SESSION["isAdmin"] or such
+//Form data post
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $fName = $_POST["fName"];
+    $lName = $_POST["lName"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    //db connection
+    $connection = ConnGet();
 
+    // Insert from data into the user table in the db
+    $sql = "INSERT INTO MyUsers (First_Name, Last_Name, UserId, Pswd, isAdmin, isActive)
+            VALUES ('$fName', '$lName', '$username', '$password', 0, 1)";
+    //Check if the query worked successfully 
+    if (mysqli_query($connection, $sql) === TRUE) {
+        // redirect to login on signup
+        header("Location: Login.php");
+        exit();
+    } else {
+        $error = "Error: " . $sql . "<br>" . $connection->error;
+    }
+
+    $connection->close();
+}
 ?>
 
 <h3>Signup</h3>
@@ -25,7 +47,7 @@ include_once "MyHeader.php";
     <br />
     <input name="password" type="text" value="" />
     <br />
-    <input type="submit" />
+    <input type="submit" value="Sign Up" />
 </form>
 
 <p>
