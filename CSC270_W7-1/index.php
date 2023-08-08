@@ -35,6 +35,7 @@ else
 }
 
 ?>
+<br />
 Search for a movie!
 <input type="text" id="searchVal" value="" placeholder="Search..."/>
 <button name="a" onclick="myClickEvent()">Submit</button>
