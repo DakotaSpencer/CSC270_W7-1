@@ -2,9 +2,9 @@
 
 // Create constants
 DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PSWD', 'Nu200240853');
+DEFINE ('DB_PSWD', 'Nu191036673');
 DEFINE ('DB_SERVER', 'localhost');
-DEFINE ('DB_NAME', 'final');
+DEFINE ('DB_NAME', 'mytestdb');
 
 // ///////////////////////////////////////////////////
 // Get db connection
