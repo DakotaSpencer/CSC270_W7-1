@@ -22,7 +22,6 @@ echo '<p type="text" id="genre" style="visibility:hidden;">'.$genre.'</p>'
     // Click event
     function getParams() {
          // alert("my click"); // Use for debugging
-        // alert("data: " + document.getElementById("dogId").value); // Use for debugging
 
         loadJson(document.getElementById("genre").innerHTML);
     }
