@@ -36,11 +36,31 @@ else
 
 ?>
 
-<?php
+<h1>Add a movie to our collection:</h1>
+<form action="insert.php" method="POST">
+    <p>
+        <label for="title">Title</label>
+        <input type="text" name="title" id="ttitle" />
+    </p>
+    <p>
+        <label for="description">Description</label>
+        <input type="text" name="last_name" id="description" />
+    </p>
+    <p>
+        <label for="genre">Genre</label>
+        <input type="text" name="genre" id="genre" />
+    </p>
+    <p>
+        <label for="rating">Rating</label>
+        <input type="text" name="rating" id="rating" />
+    </p>
+    <p>
+        <label for="releaseYear">Release Year</label>
+        <input type="text" name="releaseYear" id="releaseYear" />
+    </p>
+    <input type="submit" value="Submit" />
+</form>
 
-    
-
-?>
 
 <?php
 // Always close db connection
