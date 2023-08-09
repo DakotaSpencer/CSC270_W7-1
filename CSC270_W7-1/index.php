@@ -10,9 +10,18 @@ if (array_key_exists("PageId", $_GET) == true) {
     $PageId = $_GET["PageId"];
 }
 
+//else
+//{
+//    if(isset($_COOKIE["MyStyle"]) == false)
+//    {
+        
+//    }
+//}
 ?>
 
 <?php
+
+
 
 // Get given page
 $PageData = PageContentGet($myDbConn, $PageId);
@@ -35,7 +44,6 @@ else
 }
 
 ?>
-
 <?php
 // Always close db connection
 if ($myDbConn) {

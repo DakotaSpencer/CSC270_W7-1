@@ -5,7 +5,7 @@ include_once "MyHeader.php";
 
 ?>
 
-Add code (form) to modify the database values for a page.
+Add code (form) to modify the database values for a page.   
 <br />
 <br />
 My sugestion: Create a Table that lists all the pages (records) in the database. Each record will have an Edit and Delete link.
