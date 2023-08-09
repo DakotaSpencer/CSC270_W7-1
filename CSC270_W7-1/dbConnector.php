@@ -61,16 +61,25 @@ function MyPageremove($dbConn, $Id) {
 
 function Search($dbConn, $searchTerm)
 {
-    $query = "SELECT * FROM Movies WHERE Title like '%" . $searchTerm . "%' OR MovieDescription like '%" . $searchTerm . "%'";
+    $query = "SELECT * FROM Movies WHERE Title like '%" . $searchTerm . "%' OR MovieDescription like '%" . $searchTerm . "%'  AND isActive = 1";
     return @mysqli_query($dbConn, $query);
 }
 
 function GetGenre($dbConn, $genre)
 {
-    $query = "SELECT * FROM movies WHERE genre = '" . $genre . "'";
+    $query = "SELECT * FROM movies WHERE genre = '" . $genre . "' AND isActive = 1";
+    return @mysqli_query($dbConn, $query);
+}
+
+function GetList($dbConn, $list)
+{
+    $query = "SELECT * FROM mywebdocs WHERE title = '" . $list . "' AND isActive = 1";
     return @mysqli_query($dbConn, $query);
 }
 
 ?>
+
+?>
+
 
 
