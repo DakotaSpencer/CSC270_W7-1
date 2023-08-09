@@ -2,7 +2,7 @@
 
 // Create constants
 DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PSWD', 'Nu191036673');
+DEFINE ('DB_PSWD', 'P@ssw0rd');
 DEFINE ('DB_SERVER', 'localhost');
 DEFINE ('DB_NAME', 'mytestdb');
 
@@ -65,6 +65,11 @@ function Search($dbConn, $searchTerm)
     return @mysqli_query($dbConn, $query);
 }
 
+function GetGenre($dbConn, $genre)
+{
+    $query = "SELECT * FROM movies WHERE genre = '" . $genre . "'";
+    return @mysqli_query($dbConn, $query);
+}
 
 ?>
 
