@@ -60,6 +60,19 @@ echo '
         <a href="' . $linkTO["About"] . '?section=contact" name="EmailUs">Email Us</a>
     </div>
 </div>
+
+<div class="dropdown">
+    <button class="dropbtn">
+        <a href="CreateMovie.php" name="CreateMovie">Add Movie</a>
+    </button>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">
+        <a href="DeleteMovie.php" name="DeleteMovie">Delete Movie</a>
+    </button>
+</div>
+
 ';
 if ($_SESSION["isAdmin"] == 1) {
     echo '

@@ -61,13 +61,34 @@ function MyPageremove($dbConn, $Id) {
 
 function Search($dbConn, $searchTerm)
 {
-    $query = "SELECT * FROM Movies WHERE Title like '%" . $searchTerm . "%' OR MovieDescription like '%" . $searchTerm . "%'";
+    $query = "SELECT * FROM Movies WHERE Title like '%" . $searchTerm . "%' OR MovieDescription like '%" . $searchTerm . "%' AND isActive = 1;";
     return @mysqli_query($dbConn, $query);
 }
 
 function GetGenre($dbConn, $genre)
 {
     $query = "SELECT * FROM movies WHERE genre = '" . $genre . "'";
+    return @mysqli_query($dbConn, $query);
+}
+
+function MyCreate($dbConn, $title, $description, $genre, $rating, $releaseyear)
+{
+
+    $query = "INSERT INTO Movies (Title,MovieDescription,Genre, Rating, ReleaseYear) VALUES('$title','$description', '$genre','$rating', '$releaseyear');";
+
+    return @mysqli_query($dbConn, $query);
+}
+
+function DisableMovie($dbConn, $name){
+    $query = "UPDATE movies SET isActive=0 WHERE title ='$name'";
+
+    return @mysqli_query($dbConn, $query);
+}
+function MyDelete($dbConn, $name)
+{
+
+    $query = "DELETE FROM movies WHERE title ='$name'";
+
     return @mysqli_query($dbConn, $query);
 }
 

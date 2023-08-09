@@ -62,6 +62,7 @@ Search for a movie!
 <button name="a" onclick="myClickEvent()">Submit</button>
 <p id="A"></p>
 <p id="jsonData"></p>
+<p id="resultText"></p>
 
 <script>
    var request = new XMLHttpRequest();
@@ -91,51 +92,35 @@ Search for a movie!
         var myReturn = "<table><tr><td>Title &nbsp;  &nbsp; </td><td>Description &nbsp;  &nbsp; </td><td>Genre &nbsp;  &nbsp; </td><td>Rating &nbsp;  &nbsp; </td><td>Release year &nbsp;  &nbsp; </td></tr>";
 
         myResponse = request.responseText;
+
+        console.log(myResponse);
+
+        if (myResponse[0].Title) {
+            myData = JSON.parse(myResponse);
+
+            // alert(myData);
+            
+            // Loop through each json record and create the HTML
+            for (index in myData) {
+                myReturn += "<tr><td>" + myData[index].Title + "</td><td>" +
+                    myData[index].Description + "</td><td>" +
+                    myData[index].Genre + "</td><td>" +
+                    myData[index].Rating + "</td></tr>" +
+                    myData[index].Year + "</td></tr>";
+
+            }
+            myReturn += "</table>";
+            document.getElementById("jsonData").innerHTML = myReturn; // Display table
+        } else {
+            myReturn = "No Movies Found";
+            document.getElementById("resultText").innerHTML = myReturn;
+        }
         //alert("A: " + myResponse); // Use for debugging
         //document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
-        myData = JSON.parse(myResponse);
-
-        // alert(myData);
-
-        // Loop through each json record and create the HTML
-        for (index in myData) {
-            myReturn += "<tr><td>" + myData[index].Title + "</td><td>" +
-                myData[index].Description + "</td><td>" +
-                myData[index].Genre + "</td><td>" +
-                myData[index].Rating + "</td></tr>" +
-                myData[index].Year + "</td></tr>";
-
-        }
-        myReturn += "</table>";
-        document.getElementById("jsonData").innerHTML = myReturn; // Display table
     }
 
 
 </script>
-<h1>Add a movie to our collection:</h1>
-<form action="insert.php" method="POST">
-    <p>
-        <label for="title">Title</label>
-        <input type="text" name="title" id="ttitle" />
-    </p>
-    <p>
-        <label for="description">Description</label>
-        <input type="text" name="last_name" id="description" />
-    </p>
-    <p>
-        <label for="genre">Genre</label>
-        <input type="text" name="genre" id="genre" />
-    </p>
-    <p>
-        <label for="rating">Rating</label>
-        <input type="text" name="rating" id="rating" />
-    </p>
-    <p>
-        <label for="releaseYear">Release Year</label>
-        <input type="text" name="releaseYear" id="releaseYear" />
-    </p>
-    <input type="submit" value="Submit" />
-</form>
 
 <?php
 // Always close db connection
