@@ -49,5 +49,29 @@ function SearchDisplay($SearchData){
         echo "No Search data to display <br />";
     }
 }
+function swapStyle($id)
+{
+    $myStyle = '0';
+        switch($id)
+        {
+            case 1:
+                $_COOKIE["MyStyle"] = '1';
 
+                setcookie("MyStyle", $myStyle,time() + 86400, "/");
+                break;
+            case 2:
+                $_COOKIE["MyStyle"] = '2';
+                setcookie("MyStyle", $myStyle,time() + 86400, "/");
+                break;
+            case 3:
+                $_COOKIE["MyStyle"] = '3';
+                setcookie("MyStyle", $myStyle,time() + 86400, "/");
+                break;
+            default:
+                $_COOKIE["MyStyle"] = '1';
+                setcookie("MyStyle", $myStyle,time() + 86400, "/");
+                break;
+        }
+        //__DIR__ . "index.php";
+}
 ?>

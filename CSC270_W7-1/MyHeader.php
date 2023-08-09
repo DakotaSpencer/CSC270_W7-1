@@ -1,29 +1,35 @@
 <?php
-session_start(); // Must be first, prior to any HTML. Session will expire
-
+session_start();// Must be first, prior to any HTML. Session will expire
 include_once "dbConnector.php";
 include_once "Helper.php";
 include_once "Menu.php";
 
 ?>
 
-<?php 
 
-$myStyle = "1";
+<?php 
+$myStyle = "0";
+if(isset($_SESSION['MyStyle']))
+{
+    // Check for style setting
+    $myStyle = $_SESSION["MyStyle"];
+}
+//setcookie("MyStyle", $myStyle,time() - 86400, "/");
+if(key_exists("style", $_GET))
+{
+    //swapStyle($_GET["style"]);
+    $_SESSION['MyStyle'] = $_GET['style'];
+    $myStyle = $_SESSION["MyStyle"];
+}
 
 // Check for Priv setting
 if (isset($_SESSION["isAdmin"]) == false) {
     $_SESSION["isAdmin"] = 0; // Set default
 }
-// Check for style setting
-if (isset($_COOKIE["MyStyle"]) == true) {
-    $myStyle = $_COOKIE["MyStyle"];
-}
-else
-{
-    // Set default style
-    $_COOKIE["MyStyle"] = $myStyle;
-}
+
+
+
+
 
 $myTitle = "my title";
 $MyHeader = "My Header";
@@ -42,7 +48,7 @@ $MyHeader = "My Header";
         <link href="/Scripts/jquery-ui-1.11.1.Redmond/jquery-ui.css" rel="stylesheet" />
         -->
     <?php
-    // Set style page
+     //Set style page
     switch ($myStyle) {
         case "1":
             echo '<link rel="stylesheet" type="text/css"  href="Styles/myStyle1.css">';
@@ -78,7 +84,8 @@ mysqli_free_result($recordset);
 
 ?>
     <!-- Add a link for the custom settings -->
-    &nbsp; &nbsp;<a href="Preferences.php">My Preferences </a>
+     &nbsp; &nbsp;<a href="Preferences.php">My Preferences </a>
+   
 
 <?php
 
@@ -90,8 +97,6 @@ if ($_SESSION["isAdmin"] == 1) {
 else {
     echo '  &nbsp; &nbsp;<a href="Login.php">Login</a>';
 }
-
-
 ?>
 <br />
 <br />

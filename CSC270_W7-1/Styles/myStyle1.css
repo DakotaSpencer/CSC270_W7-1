@@ -52,3 +52,22 @@ a{
     color: white;
     text-decoration: none;
 }
+body
+{
+    background-color:white;
+}
+div {
+    color: white;
+}
+.fancyButton {
+    background-color: #10a3d8;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+}
+
+    .fancyButton:hover {
+        background-color: #46c3f1;
+    }
