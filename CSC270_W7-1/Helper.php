@@ -4,22 +4,7 @@
 
 <?php
 // //////////////////////////////////////////////////
-function MenuDisplay($dataset) {
 
-// &nbsp; &nbsp;<a href="ContactUs.php">
-
-    if ($dataset){
-        // per.Fname, per.Lname, cel.Cell_Id, cel.CellNumber
-        while($row = mysqli_fetch_array($dataset)){
-            echo ' &nbsp; &nbsp; <a href="Index.php?PageId=' . $row['id'] .  '" >' . $row['Title'] . '</a>';
-        }
-    } // End if
-    else {
-        echo "No menu items<br />";
-       // echo mysqli_error($myDbConn);
-    }
-
-}
 // /////////////////
 function PageDisplay($PageData) {
 

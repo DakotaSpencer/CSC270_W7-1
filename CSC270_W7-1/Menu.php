@@ -12,10 +12,10 @@ $linkTO = [
 ?>
 <?php
 
-echo'
+echo '
 <div class="dropdown">
     <button class="dropbtn">
-        <a href="'.$linkTO["Home"].'" name="Index">Home</a>
+        <a href="' . $linkTO["Home"] . '" name="Index">Home</a>
     </button>
 </div>
 
@@ -60,8 +60,17 @@ echo'
         <a href="' . $linkTO["About"] . '?section=contact" name="EmailUs">Email Us</a>
     </div>
 </div>
-
-<div class="dropdown">
+';
+if ($_SESSION["isAdmin"] == 1) {
+    echo '
+    <div class="dropdown">
+        <button class="dropbtn">
+            <a href="ManagePages.php">Manage Pages</a>
+        </button>
+    </div>
+    ';
+} else {
+    echo '<div class="dropdown">
     <button class="dropbtn">
         <a href="' . $linkTO["Login"] . '" name="Login">Login</a>
     </button>
@@ -70,6 +79,13 @@ echo'
     <button class="dropbtn">
         <a href="' . $linkTO["Signup"] . '" name="Signup">signUp</a>
     </button>
-</div>
-'
+</div>';
+}
+?>
+
+<?php
+
+// Add a Admin link if. . .
+// $_SESSION["isAdmin"] = 1; // Cheat - Do not do this in your code.
+
 ?>
