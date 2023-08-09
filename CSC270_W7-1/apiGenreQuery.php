@@ -38,8 +38,6 @@ if (array_key_exists("genre", $_GET) == TRUE) {
     }
     mysqli_close($myDbConn);
 }
-//INSERT INTO Dog (Dog_Name,Breed,Age, Dog_Owner) VALUES('Precious','Pitbull', 1, 'Cynthia');
-
 echo $myJSON;
 
 ?>
