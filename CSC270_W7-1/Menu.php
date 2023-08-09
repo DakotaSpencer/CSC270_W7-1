@@ -5,7 +5,9 @@ $linkTO = [
     "About" => "about.php",
     "Account" => "account.php",
     "Lists" => "list.php",
-    "Preferances" => "preferances.php"
+    "Preferances" => "preferances.php",
+    "Login" => "Login.php",
+    "Signup" => "SignUp.php"
 ]
 ?>
 <?php
@@ -62,6 +64,17 @@ echo'
         <a href="' . $linkTO["About"] . '?section=location" name="Locations">Locations</a>
         <a href="' . $linkTO["About"] . '?section=contact" name="EmailUs">Email Us</a>
     </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">
+        <a href="' . $linkTO["Login"] . '" name="Index">Login</a>
+    </button>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">
+        <a href="' . $linkTO["Signup"] . '" name="Index">signUp</a>
+    </button>
 </div>
 '
 ?>
