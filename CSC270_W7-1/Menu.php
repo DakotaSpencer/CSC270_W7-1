@@ -39,20 +39,12 @@ echo'
     </div>
 </div>
 
-<div class="dropdown">
-    <button class="dropbtn">
-        <a href="' . $linkTO["Account"] . '" name="Account">Account</a>
-    </button>
-</div>
 
 <div class="dropdown">
     <button class="dropbtn">Lists</button>
     <div class="dropdown-content">
         <a href="' . $linkTO["Lists"] . '?list=history" list="ListID">History</a>
         <a href="' . $linkTO["Lists"] . '?list=wl" list="ListID">Watch Later</a>
-        <a href="' . $linkTO["Lists"] . '?list=recommendations" list="ListID">Recommendations</a>
-        <a href="' . $linkTO["Lists"] . '" list="ListID">Custom List 1</a>
-        <a href="' . $linkTO["Lists"] . '" list="ListID">Custom List 2</a>
         <a href="editLists.php">Edit Lists</a>
     </div>
 </div>
