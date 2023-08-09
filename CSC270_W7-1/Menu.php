@@ -1,11 +1,11 @@
 <?php
 $linkTO = [
     "Home" => "index.php",
-    "Genre" => "genre.php",
-    "About" => "about.php",
+    "Genre" => "Genre.php",
+    "About" => "About.php",
     "Account" => "account.php",
     "Lists" => "list.php",
-    "Preferances" => "preferances.php",
+    "Preferences" => "Preferences.php",
     "Login" => "Login.php",
     "Signup" => "SignUp.php"
 ]
@@ -22,14 +22,12 @@ echo'
 <div class="dropdown">
     <button class="dropbtn">Genres</button>
     <div class="dropdown-content">
-        <a href="' . $linkTO["Genre"] . '?genre=action">Action</a>
-        <a href="' . $linkTO["Genre"] . '?genre=adventure">Adventure</a>
         <a href="' . $linkTO["Genre"] . '?genre=animation">Animation</a>
+        <a href="' . $linkTO["Genre"] . '?genre=christmas">Christmas</a>
         <a href="' . $linkTO["Genre"] . '?genre=comedy">Comedy</a>
-        <a href="' . $linkTO["Genre"] . '?genre=drama">Drama</a>
         <a href="' . $linkTO["Genre"] . '?genre=fantasy">Fantasy</a>
         <a href="' . $linkTO["Genre"] . '?genre=horror">Horror</a>
-        <a href="' . $linkTO["Genre"] . '?genre=romance">Romance</a>
+        <a href="' . $linkTO["Genre"] . '?genre=sci-fi">Sci-Fi</a>
     </div>
 </div>
 
@@ -44,16 +42,13 @@ echo'
     <div class="dropdown-content">
         <a href="' . $linkTO["Lists"] . '?list=history">History</a>
         <a href="' . $linkTO["Lists"] . '?list=wl">Watch Later</a>
-        <a href="' . $linkTO["Lists"] . '?list=recommendations">Recommendations</a>
-        <a href="' . $linkTO["Lists"] . '">Custom List 1</a>
-        <a href="' . $linkTO["Lists"] . '">Custom List 2</a>
         <a href="editLists.php">Edit Lists</a>
     </div>
 </div>
 
 <div class="dropdown">
     <button class="dropbtn">
-        <a href="' . $linkTO["Preferances"] . '" name="Preferances">Preferances</a>
+        <a href="' . $linkTO["Preferences"] . '" name="Preferances">Preferences</a>
     </button>
 </div>
 
@@ -68,12 +63,12 @@ echo'
 
 <div class="dropdown">
     <button class="dropbtn">
-        <a href="' . $linkTO["Login"] . '" name="Index">Login</a>
+        <a href="' . $linkTO["Login"] . '" name="Login">Login</a>
     </button>
 </div>
 <div class="dropdown">
     <button class="dropbtn">
-        <a href="' . $linkTO["Signup"] . '" name="Index">signUp</a>
+        <a href="' . $linkTO["Signup"] . '" name="Signup">signUp</a>
     </button>
 </div>
 '
