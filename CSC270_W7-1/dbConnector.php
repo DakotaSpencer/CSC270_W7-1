@@ -67,13 +67,7 @@ function Search($dbConn, $searchTerm)
 
 function GetGenre($dbConn, $genre)
 {
-    $query = "SELECT * FROM movies WHERE genre = '" . $genre . "' AND isActive = 1";
-    return @mysqli_query($dbConn, $query);
-}
-
-function GetList($dbConn, $list)
-{
-    $query = "SELECT * FROM mywebdocs WHERE title = '" . $list . "' AND isActive = 1";
+    $query = "SELECT * FROM movies WHERE genre = '" . $genre . "'";
     return @mysqli_query($dbConn, $query);
 }
 
@@ -99,8 +93,5 @@ function MyDelete($dbConn, $name)
 }
 
 ?>
-
-?>
-
 
 
