@@ -32,12 +32,6 @@ echo '
 </div>
 
 <div class="dropdown">
-    <button class="dropbtn">
-        <a href="' . $linkTO["Account"] . '" name="Account">Account</a>
-    </button>
-</div>
-
-<div class="dropdown">
     <button class="dropbtn">Lists</button>
     <div class="dropdown-content">
         <a href="' . $linkTO["Lists"] . '?list=history">History</a>

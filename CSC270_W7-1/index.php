@@ -93,28 +93,21 @@ Search for a movie!
 
         myResponse = request.responseText;
 
-        console.log(myResponse);
+        myData = JSON.parse(myResponse);
 
-        if (myResponse[0].Title) {
-            myData = JSON.parse(myResponse);
-
-            // alert(myData);
+        // alert(myData);
             
-            // Loop through each json record and create the HTML
-            for (index in myData) {
-                myReturn += "<tr><td>" + myData[index].Title + "</td><td>" +
-                    myData[index].Description + "</td><td>" +
-                    myData[index].Genre + "</td><td>" +
-                    myData[index].Rating + "</td></tr>" +
-                    myData[index].Year + "</td></tr>";
+        // Loop through each json record and create the HTML
+        for (index in myData) {
+            myReturn += "<tr><td>" + myData[index].Title + "</td><td>" +
+                myData[index].Description + "</td><td>" +
+                myData[index].Genre + "</td><td>" +
+                myData[index].Rating + "</td></tr>" +
+                myData[index].Year + "</td></tr>";
 
-            }
-            myReturn += "</table>";
-            document.getElementById("jsonData").innerHTML = myReturn; // Display table
-        } else {
-            myReturn = "No Movies Found";
-            document.getElementById("resultText").innerHTML = myReturn;
         }
+        myReturn += "</table>";
+        document.getElementById("jsonData").innerHTML = myReturn; // Display table
         //alert("A: " + myResponse); // Use for debugging
         //document.getElementById("A").innerHTML = myResponse; // Display the json for debugging
     }
